@@ -1,10 +1,10 @@
-![](https://github.com/PROG7311-VCDN-2024/EmailService/workflows/.NET/badge.svg)
+![](https://github.com/PROG7311-VCDN-2024/EmailService/workflows/.NET/badge.svg) <-- This is covered at the end of this readme...
 
 ## Integrating SendGrid into a Minimal API and adding GitHub Actions
 
 You will need to integrate email notifications into your app. One good solution that you can easily sign up for (do not pay) is [SendGrid](https://sendgrid.com/en-us/solutions/email-api)
 
-You will implement the email sending feature in a [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0).
+You will implement the email-sending feature in a [Minimal API](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-8.0).
 
 Read these resources before carrying on!
 
@@ -16,11 +16,11 @@ Read these resources before carrying on!
 1. Choose C# as a language.
 1. Follow the steps, including giving your ApiKey a name
 1. Once you give it a name, you will get an ApiKey which you need to add as an environment variable (I named by environment variable `SENDGRID_API_KEY` as suggested by SendGrid).
-1. The SendGrid platform will guide you add a verified sender. This is the address from which you will send your emails. I used my Gmail.
+1. The SendGrid platform will guide you to add a verified sender. This is the address from which you will send your emails. I used my Gmail.
 
 ### Create a Minimal API project
 1. In Visual Studio, create a new API project and ensure that you **unselect** Use Controllers to get a minimal API. Do not choose Docker.
-1. Once project is created, run it and you will see its similar to an API to the end user.
+1. Once the project is created, run it and you will see it's similar to an API to the end user.
 1. Watch this video to understand how it works: https://www.youtube.com/watch?v=87oOF9Ve-KA&ab_channel=IAmTimCorey (Go to 36 mins and watch until the end).
 
 ### Integrating SendGrid into the Mininal API
@@ -39,7 +39,7 @@ Read these resources before carrying on!
     var response = await client.SendEmailAsync(msg);
     ```
 
-1. In `Program.cs`, add a MapGet called `SendEmail` with an anonymous `async` method that sends the email using the nuget package: 
+1. In `Program.cs`, add a MapGet called `SendEmail` with an anonymous `async` method that sends the email using the NuGet package: 
     ```
     app.MapGet("/SendEmail", async (
         string toName, 
@@ -67,11 +67,12 @@ Read these resources before carrying on!
     1. We are defining a single action for this API that is named SendEmail. It responds to GET requests made to the `/SendEmail` endpoint.
     1. We have refactored the code to get everything that is needed as parameters in the request. You need to add validation.
     1. The relevant data is assembled as per the documentation and an email is sent.
-1. Test this in the Swagger docs when you run the API or Postman. Note: A status code of 202 means email is sent. If you try to use institutional email to send, it gets finicky.
+1. Test this in the Swagger docs when you run the API or Postman. Note: A status code of 202 means the email is sent. If you try to use institutional email to send, it gets finicky.
 1. If all works, good stuff! Now integrate it into your bookstore app :-)
 1. We will deploy this when we get to containerization.
 
 ### Adding GitHub Actions
 1. Follow this tutorial: https://thesharperdev.com/how-to-create-a-net-core-api-ci-action-using-github-actions/
+1. Bear in mind I deviated with some commands and put dotnet 8.0.
 1. Add in a badge as well!
 /END
