@@ -1,4 +1,4 @@
-![](https://github.com/PROG7311-VCDN-2024/EmailService/workflows/NET_Core_CI/badge.svg)
+![](https://github.com/PROG7311-VCDN-2024/EmailService/workflows/.NET/badge.svg)
 
 ## Integrating SendGrid into a Minimal API and adding GitHub Actions
 
