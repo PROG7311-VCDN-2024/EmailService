@@ -65,8 +65,8 @@ Read these resources before carrying on!
     1. We are defining a single action for this API that is named SendEmail. It responds to GET requests made to the `/SendEmail` endpoint.
     1. We have refactored the code to get everything that is needed as parameters in the request. You need to add validation.
     1. The relevant data is assembled as per the documentation and an email is sent.
-    1. Test this in the Swagger docs when you run the API or Postman. Note: A status code of 202 means email is sent. If you try to use institutional email to send, it gets finicky.
-    1. If all works, good stuff! Now integrate it into your bookstore app :-)
-    1. We will deploy this when we get to containerization.
+1. Test this in the Swagger docs when you run the API or Postman. Note: A status code of 202 means email is sent. If you try to use institutional email to send, it gets finicky.
+1. If all works, good stuff! Now integrate it into your bookstore app :-)
+1. We will deploy this when we get to containerization.
 
-    /END
+/END
