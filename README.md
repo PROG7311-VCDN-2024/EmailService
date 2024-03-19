@@ -1,4 +1,6 @@
-## Integrating SendGrid into a Minimal API
+![](https://github.com/PROG7311-VCDN-2024/EmailService/workflows/NET_Core_CI/badge.svg)
+
+## Integrating SendGrid into a Minimal API and adding GitHub Actions
 
 You will need to integrate email notifications into your app. One good solution that you can easily sign up for (do not pay) is [SendGrid](https://sendgrid.com/en-us/solutions/email-api)
 
@@ -69,4 +71,7 @@ Read these resources before carrying on!
 1. If all works, good stuff! Now integrate it into your bookstore app :-)
 1. We will deploy this when we get to containerization.
 
+### Adding GitHub Actions
+1. Follow this tutorial: https://thesharperdev.com/how-to-create-a-net-core-api-ci-action-using-github-actions/
+1. Add in a badge as well!
 /END
