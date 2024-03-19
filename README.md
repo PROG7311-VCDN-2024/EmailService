@@ -74,5 +74,7 @@ Read these resources before carrying on!
 ### Adding GitHub Actions
 1. Follow this tutorial: https://thesharperdev.com/how-to-create-a-net-core-api-ci-action-using-github-actions/
 1. Bear in mind I deviated with some commands and put dotnet 8.0.
-1. Add in a badge as well!
+1. Add in a badge as well.
+1. Since this service uses an Environment variable, add it in as a secret and use it in your workflow: [https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#using-encrypted-secrets-in-a-workflow)https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions#using-encrypted-secrets-in-a-workflow
+
 /END
